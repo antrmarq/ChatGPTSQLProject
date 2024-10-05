@@ -113,3 +113,8 @@ Question 7:
     'Card004' has a distinctive feature: its back side is filled in. Neither card appears to have a third distinct feature, as indicated by 'None'.
 
     Both cards were used or modified at similar times. 'Card004' was used or modified at 10:16:48 PM on October 4, 2024, and again at 12:09:21 AM on the following day, October 5. 'Card005' was used or modified at the same starting time as the 'card004', but it was last used or modified a bit earlier - at 12:04:31 AM on October 5, 2024.
+
+
+At first, I asked ChatGPT to generate SQL queries directly, but it produced a lot of irrelevant "fluff" because it didn’t understand my database schema and I did not provide enough direction. This is an example of zero-shot prompting, where no detailed context or examples were provided. Without clear schema information and directions, ChatGPT struggled to create useful queries that worked.
+
+To improve the results, I started providing the table and column names from my database, which led to much more accurate queries. This approach aligns with single-domain few-shot prompting, where schema-specific information is given, allowing GPT to generate queries that matched my database structure. Adding this context greatly improved the output.
