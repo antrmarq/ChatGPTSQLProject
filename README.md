@@ -13,8 +13,9 @@ Cards Table:
 <img width="869" alt="Screenshot 2024-10-05 at 12 19 17 AM" src="https://github.com/user-attachments/assets/c36b5557-b2c6-40c8-ac4a-8546480dbbfb">
 
 
-In Python, I created a way for me to query the database and ask ChatGPT these 6 questions:
- Question 1: Show me all the cards in the deck titled 'Python Basics'
+In Python, I created a way for me to query the database and ask ChatGPT these 7 questions:
+
+Question 1: Show me all the cards in the deck titled 'Python Basics'
 
 Question 2: Show me all the cards created by the user'123456789012'
 
