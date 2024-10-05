@@ -26,6 +26,8 @@ Question 5: Show me all the cards where both the front and back are null
 
 Question 6: Show me all the cards where the back is null
 
+Question 7: Show me all the cards where the front is null
+
 They output these repsonses respectvely:
 
 Question 1:
@@ -94,3 +96,13 @@ Question 6:
     Friendly Response: The SQL query results consist of two records related to cards: 'card003' and 'card005'. Both of these cards belong to the same deck, 'deck001'. 
     For 'card003', its status indicates that the front side is filled in. However, no status is provided for 'card005'. Both cards share the same pair of numbers: '123456789012' and the times suggest that they were active on October 4, 2024, and into the early hours of October 5, 2024. 
     'Card003' was last active at 12:09 AM, while 'card005' was last active at 12:04 AM on October 5, 2024.
+
+Question 7:
+
+    Generated SQL Query: SELECT * FROM cards WHERE front_side IS NULL;
+    Query Results: [('card004', 'deck001', None, 'Back Side is filled in', '123456789012', '123456789012', datetime.datetime(2024, 10, 4, 22, 16, 48), datetime.datetime(2024, 10, 5, 0, 9, 21)), ('card005', 'deck001', None, None, '123456789012', '123456789012', datetime.datetime(2024, 10, 4, 22, 16, 48), datetime.datetime(2024, 10, 5, 0, 4, 31))]
+    Friendly Response: The query results show information about two cards: 'card004' and 'card005'. Both cards are from the same deck 'deck001' and share the same identifier numbers, suggesting they might be part of a series or a set.
+
+    'Card004' has a distinctive feature: its back side is filled in. Neither card appears to have a third distinct feature, as indicated by 'None'.
+
+    Both cards were used or modified at similar times. 'Card004' was used or modified at 10:16:48 PM on October 4, 2024, and again at 12:09:21 AM on the following day, October 5. 'Card005' was used or modified at the same starting time as the 'card004', but it was last used or modified a bit earlier - at 12:04:31 AM on October 5, 2024.
