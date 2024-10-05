@@ -4,6 +4,8 @@ For this project I created a database of study cards meant to be used to study a
 
 The purpose of the "studycards" database is to organize and manage decks of flashcards, allowing users to create, edit, and study custom cards, while tracking deck and card metadata such as creation dates.
 
+
+
 In this project I used MySQL as my database with the following schema:
 
 Decks Table:
@@ -13,6 +15,8 @@ Decks Table:
 Cards Table:
 
 <img width="869" alt="Screenshot 2024-10-05 at 12 19 17 AM" src="https://github.com/user-attachments/assets/c36b5557-b2c6-40c8-ac4a-8546480dbbfb">
+
+
 
 
 In Python, I created a way for me to query the database and ask ChatGPT these 7 questions:
