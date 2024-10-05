@@ -2,6 +2,8 @@
 
 For this project I created a database of study cards meant to be used to study a deck of cards.
 
+The purpose of the "studycards" database is to organize and manage decks of flashcards, allowing users to create, edit, and study custom cards, while tracking deck and card metadata such as creation dates, authorship, and content.
+
 In this project I used MySQL as my database with the following schema:
 
 Decks Table:
