@@ -7,9 +7,11 @@ The purpose of the "studycards" database is to organize and manage decks of flas
 In this project I used MySQL as my database with the following schema:
 
 Decks Table:
+
 <img width="869" alt="Screenshot 2024-10-05 at 12 19 08 AM" src="https://github.com/user-attachments/assets/31ebdd4a-103a-44b1-8908-1e44d2cc4d9f">
 
 Cards Table:
+
 <img width="869" alt="Screenshot 2024-10-05 at 12 19 17 AM" src="https://github.com/user-attachments/assets/c36b5557-b2c6-40c8-ac4a-8546480dbbfb">
 
 
