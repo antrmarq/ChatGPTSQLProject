@@ -109,3 +109,7 @@ if __name__ == "__main__":
     print("Question 6:")
     question = "Show me all the cards where the back is null"
     ask_question(question)
+
+    print("Question 7:")
+    question = "Show me all the cards where the front is null"
+    ask_question(question)
