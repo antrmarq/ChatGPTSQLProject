@@ -27,6 +27,7 @@ Question 6: Show me all the cards where the back is null
 They output these repsonses respectvely:
 
 Question 1:
+
     Generated SQL Query: SELECT cards.* 
     FROM cards 
     JOIN decks ON cards.deck_id = decks.id 
@@ -43,6 +44,7 @@ Question 1:
     The repetitive '123456789012' sequence and the identical initializing timestamps suggest all cards were created in bulk at the same time. Their last update timestamps differ, indicating some cards may have been revised or revisited more recently than others.
 
 Question 2:
+
     Generated SQL Query: SELECT * FROM cards WHERE created_by = '123456789012';
 
     Query Results: [('card001', 'deck001', 'What is a variable?', 'A variable stores data in memory.', '123456789012', '123456789012', datetime.datetime(2024, 10, 4, 22, 16, 48), datetime.datetime(2024, 10, 5, 0, 4, 31)), ('card002', 'deck001', 'What is a loop?', 'A loop repeats a set of instructions.', '123456789012', '123456789012', datetime.datetime(2024, 10, 4, 22, 16, 48), datetime.datetime(2024, 10, 5, 0, 4, 31)), ('card003', 'deck001', 'Front Side is filled in', None, '123456789012', '123456789012', datetime.datetime(2024, 10, 4, 22, 16, 48), datetime.datetime(2024, 10, 5, 0, 9, 21)), ('card004', 'deck001', None, 'Back Side is filled in', '123456789012', '123456789012', datetime.datetime(2024, 10, 4, 22, 16, 48), datetime.datetime(2024, 10, 5, 0, 9, 21)), ('card005', 'deck001', None, None, '123456789012', '123456789012', datetime.datetime(2024, 10, 4, 22, 16, 48), datetime.datetime(2024, 10, 5, 0, 4, 31))]
@@ -56,6 +58,7 @@ Question 2:
     The same user (with an ID '123456789012') has created and modified all of these cards.
 
 Question 3:
+
     Generated SQL Query: SELECT * FROM decks WHERE created_by = '123456789012';
     
     Query Results: [('deck001', 'Python Basics', '123456789012', '123456789012', None, datetime.datetime(2024, 10, 4, 22, 16, 44), datetime.datetime(2024, 10, 5, 0, 4, 17)), ('deck002', 'Deleted Deck', '123456789012', '123456789012', datetime.datetime(2024, 10, 4, 22, 16, 45), datetime.datetime(2024, 10, 4, 22, 16, 44), datetime.datetime(2024, 10, 5, 0, 4, 17))]
@@ -65,6 +68,7 @@ Question 3:
     The second item with the ID 'deck002' is titled 'Deleted Deck', and similar to the first item, it is also associated with the number '123456789012' twice which might mean that the same person both created and owns it. This item was created on October 4, 2024, at 10:16:45 PM, but interestingly its last update seems to have been performed a second before the creation at 10:16:44 PM. The record was last verified (or interacted with) on October 5, 2024, at 12:04:17 AM.
 
 Question 4:
+
     Generated SQL Query: SELECT * FROM decks WHERE deleted_at IS NOT NULL;
     
     Query Results: [('deck002', 'Deleted Deck', '123456789012', '123456789012', datetime.datetime(2024, 10, 4, 22, 16, 45), datetime.datetime(2024, 10, 4, 22, 16, 44), datetime.datetime(2024, 10, 5, 0, 4, 17))]
@@ -72,6 +76,7 @@ Question 4:
     Friendly Response: The query result indicates that there is a deck named "Deleted Deck" with the ID "deck002". This deck has two identification numbers, both are "123456789012". The deck was created on October 4, 2024, at 22:16:44, updated a second later at 22:16:45, and last accessed on October 5, 2024, at 00:04:17.
 
 Question 5:
+
     Generated SQL Query: SELECT * FROM cards WHERE front_side IS NULL AND back_side IS NULL;
     
     Query Results: [('card005', 'deck001', None, None, '123456789012', '123456789012', datetime.datetime(2024, 10, 4, 22, 16, 48), datetime.datetime(2024, 10, 5, 0, 4, 31))]
@@ -79,6 +84,7 @@ Question 5:
     Friendly Response: The results from the SQL query indicate that the card labeled "card005" from the deck "deck001" has two numerical identifiers, both being "123456789012". The card seems to have been used or activated twice, once on October 4, 2024, at 10:16:48 PM and then again later on October 5, 2024, at 12:04:31 AM. The fields with "None" values suggest that there might be missing information or the relevant details for those aspects are not available or applicable.
 
 Question 6:
+
     Generated SQL Query: SELECT * FROM cards WHERE back_side IS NULL;
     
     Query Results: [('card003', 'deck001', 'Front Side is filled in', None, '123456789012', '123456789012', datetime.datetime(2024, 10, 4, 22, 16, 48), datetime.datetime(2024, 10, 5, 0, 9, 21)), ('card005', 'deck001', None, None, '123456789012', '123456789012', datetime.datetime(2024, 10, 4, 22, 16, 48), datetime.datetime(2024, 10, 5, 0, 4, 31))]
